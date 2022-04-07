@@ -7,7 +7,7 @@
     location, type of attraction, and cost. 
   - The program has over 68 attractions currently in the database with more being added every day!
 
-## How to install Whereza
+## How to install Whereza?
 
 Installing Whereza is an easy 2 step process!
 
