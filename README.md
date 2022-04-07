@@ -1,2 +1,2 @@
 # Whereza
-![Whereza Logo](image.jpg)
+![Whereza Logo](images/whereza_logo.png)
