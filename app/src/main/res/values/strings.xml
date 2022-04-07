@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Whereza</string>
+    <string name="whereza">Whereza</string>
+    <string name="whereza_hotel_nearby">Whereza Hotel Nearby?</string>
+    <string name="logo">logo</string>
+    <string name="textview">TextView</string>
+    <string name="selection">Selection</string>
+    <string name="please_select_a_rating_for_the_attraction">Please select a rating for the attraction!</string>
+    <string name="please_select_an_attraction">Please select an attraction!</string>
+    <string name="open_right_now">Open right now?</string>
+    <string name="that_is">that is...</string>
+    <string name="in">in...</string>
+    <string name="and">and...</string>
+    <string name="city_state">Enter a City, State</string>
+    <string name="cheap">Cheap</string>
+    <string name="affordable">Affordable</string>
+    <string name="search">Search</string>
+    <string name="Unfound">I couldn\'t find that in my database :\'(
+        Try adjusting your filters!</string>
+    25
+</resources>
