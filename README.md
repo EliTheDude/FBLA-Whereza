@@ -1,2 +1,2 @@
-# FBLA-Whereza
-# Whereza Information
+# Whereza
+![Whereza Logo](image.jpg)
