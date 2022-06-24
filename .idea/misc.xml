@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable-v23/layout_corners_shape.xml" value="0.4215" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4215" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/border_shadow.xml" value="0.5475" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/cool_gradient.xml" value="0.5475" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/cool_gradient_up_down.xml" value="0.309" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/ic_arrow_down.xml" value="0.4215" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4215" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/layout_corners_shape.xml" value="0.33" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/popup_round.xml" value="0.4215" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/progress_drawn.xml" value="0.5475" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/seekbar_progress.xml" value="0.33" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/drawable/seekbar_thumb.xml" value="0.5475" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout-v23/second_page.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/activity_main.xml" value="0.5401041666666667" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/activity_results.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/color_spinner_layout.xml" value="0.421875" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/second_page.xml" value="0.25" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/spinner_dropdown_layout.xml" value="0.421875" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/third_page.xml" value="0.5541666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
