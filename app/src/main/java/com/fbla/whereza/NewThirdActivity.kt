@@ -54,7 +54,7 @@ class NewThirdActivity : AppCompatActivity() {
 
 
     private fun glideGet(imageUrl: String, image: ImageView): Bitmap? {
-        var bitMapImage: Bitmap? = null
+       var bitMapImage: Bitmap? = null
        GlideApp.with(this)
             .asBitmap()
             .load(imageUrl)
