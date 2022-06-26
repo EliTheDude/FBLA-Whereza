@@ -175,7 +175,7 @@ class SecondActivity : AppCompatActivity() {
             val topic_selec = attractions.selectedItem.toString()
             val cost_selec = (costScale.progress + 1).toString()
 
-            val intent = Intent(this, ThirdActivity::class.java).also {
+            val intent = Intent(this, NewThirdActivity::class.java).also {
                 it.putExtra("rating", rating_selec)
                 it.putExtra("topic", topic_selec)
                 it.putExtra("city_state", city_state_selec)
