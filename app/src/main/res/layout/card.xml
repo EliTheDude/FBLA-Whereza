@@ -1,134 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000000">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card"
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="10dp">
+        android:layout_height="match_parent"
+        android:background="#000000">
 
-        <RelativeLayout
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
 
-            <ImageView
-                android:id="@+id/placePhoto"
-                android:layout_width="wrap_content"
-                android:layout_height="180dp"
-                android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"
-                android:background="@drawable/rounded_corners"
-                android:clipToOutline="true"
-                android:scaleType="centerCrop"
-                tools:srcCompat="@drawable/RedRobin"
-                android:contentDescription="Show the image of the place" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/placeName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/placePhoto"
-                android:layout_marginStart="2dp"
-                android:fontFamily="@font/orbitron"
-                android:padding="10dp"
-                android:text="Red Robin"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="10pt"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/placePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/rounded_corners"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Show the image of the place"
+                    loadimage='@{"https://content.fortune.com/wp-content/uploads/2017/04/restuarant-exterior-red-robin-4749x2633.jpg?resize=750,500"}'/>
 
-            <RatingBar
-                android:id="@+id/placeRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/placeName"
-                android:layout_marginStart="62dp"
-                android:layout_marginTop="-6dp"
-                android:backgroundTint="#8C2020"
-                android:clickable="false"
-                android:contentDescription="@string/please_select_a_rating_for_the_attraction"
-                android:foregroundTint="#A14B4B"
-                android:indeterminateTint="#B6B6B6"
-                android:numStars="5"
-                android:progressBackgroundTint="#5961A7B3"
-                android:progressTint="#f853ca"
-                android:rating="3.5"
-                android:scaleX=".5"
-                android:scaleY=".5"
-                android:transformPivotX="0dp"
-                android:transformPivotY="0dp" />
+                <TextView
+                    android:id="@+id/placeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/placePhoto"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/orbitron"
+                    android:padding="10dp"
+                    android:text="Red Robin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/placeReviews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/placeName"
-                android:layout_marginStart="194dp"
-                android:layout_marginTop="-4.75dp"
-                android:text="5 (472)"
-                android:textColor="#505050"
-                android:textSize="16sp" />
+                <RatingBar
+                    android:id="@+id/placeRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/placeName"
+                    android:layout_marginStart="62dp"
+                    android:layout_marginTop="-6dp"
+                    android:backgroundTint="#8C2020"
+                    android:clickable="false"
+                    android:contentDescription="@string/please_select_a_rating_for_the_attraction"
+                    android:foregroundTint="#A14B4B"
+                    android:indeterminateTint="#B6B6B6"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#5961A7B3"
+                    android:progressTint="#f853ca"
+                    android:rating="3.5"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
 
-            <Button
-                android:id="@+id/Navigate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/placeRating"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="#2cb3fb"
-                android:scaleX="1"
-                android:scaleY="1"
-                android:text="Navigate"
-                app:icon="@android:drawable/ic_dialog_map"
-                tools:ignore="TextContrastCheck" />
+                <TextView
+                    android:id="@+id/placeReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placeName"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginTop="-4.75dp"
+                    android:text="5 (472)"
+                    android:textColor="#505050"
+                    android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/locationIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/placePhoto"
-                android:layout_marginStart="215dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="Show the icon of locations"
-                app:srcCompat="@drawable/ic_location"
-                tools:ignore="ImageContrastCheck" />
+                <Button
+                    android:id="@+id/Navigate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placeRating"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#2cb3fb"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:text="Navigate"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/placeDistance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/placePhoto"
-                android:layout_marginStart="242dp"
-                android:layout_marginTop="13dp"
-                android:text="10.5 mi."
-                android:textColor="#5C5C5C"
-                android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placePhoto"
+                    android:layout_marginStart="215dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Show the icon of locations"
+                    app:srcCompat="@drawable/ic_location"
+                    tools:ignore="ImageContrastCheck" />
 
-            <TextView
-                android:id="@+id/placeAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/placeReviews"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="2200 NW Stewart Pkwy, Roseburg"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/placeDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placePhoto"
+                    android:layout_marginStart="242dp"
+                    android:layout_marginTop="13dp"
+                    android:text="10.5 mi."
+                    android:textColor="#5C5C5C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/placeAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placeReviews"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="2200 NW Stewart Pkwy, Roseburg"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
 
-        </RelativeLayout>
+            </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
