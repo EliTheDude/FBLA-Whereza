@@ -15,6 +15,7 @@ class CardViewHolder(
     @SuppressLint("SetTextI18n")
     fun bindPlace(place: Places)
     {
+        cardBinding.placePhoto.setImageBitmap(place.placePhoto)
         cardBinding.placeName.text = place.placeName
         cardBinding.placeDistance.text = place.placeDistance
         cardBinding.placeRating.rating = place.placeRating.toFloat()

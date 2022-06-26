@@ -1,9 +1,11 @@
 package com.fbla.whereza
 
+import android.graphics.Bitmap
+
 var placeList = mutableListOf<Places>()
 
-class Places (
-    var placePhoto: String,
+class Places(
+    var placePhoto: Bitmap?,
     var placeName: String,
     var placeDistance: String,
     var placeRating: String,
