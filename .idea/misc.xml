@@ -28,10 +28,11 @@
         <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/second_page.xml" value="0.12857142857142856" />
         <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/spinner_dropdown_layout.xml" value="0.421875" />
         <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza/app/src/main/res/layout/third_page.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sunfu/OneDrive/Documents/FBLA_Whereza_New/FBLA-Whereza/app/src/main/res/layout/new_third_page.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
