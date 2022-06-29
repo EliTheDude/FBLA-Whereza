@@ -31,10 +31,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="180dp"
                     android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/rounded_corners"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
+                    android:scaleX="1.1"
+                    android:scaleType="fitXY"
                     android:contentDescription="Show the image of the place"
                     loadimage='@{"https://content.fortune.com/wp-content/uploads/2017/04/restuarant-exterior-red-robin-4749x2633.jpg?resize=750,500"}'/>
 
@@ -51,6 +51,17 @@
                     android:textColor="@color/black"
                     android:textSize="10pt"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placeReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/placeName"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginTop="-4.75dp"
+                    android:text="5 (472)"
+                    android:textColor="#505050"
+                    android:textSize="16sp" />
 
                 <RatingBar
                     android:id="@+id/placeRating"
@@ -73,17 +84,6 @@
                     android:scaleY=".5"
                     android:transformPivotX="0dp"
                     android:transformPivotY="0dp" />
-
-                <TextView
-                    android:id="@+id/placeReviews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/placeName"
-                    android:layout_marginStart="194dp"
-                    android:layout_marginTop="-4.75dp"
-                    android:text="5 (472)"
-                    android:textColor="#505050"
-                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/Navigate"

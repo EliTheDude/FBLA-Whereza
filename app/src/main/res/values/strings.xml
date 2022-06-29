@@ -10,10 +10,10 @@
     <string name="open_right_now">Open right now?</string>
     <string name="that_is">that is...</string>
     <string name="in">in...</string>
-    <string name="and">and...</string>
-    <string name="city_state">Enter a City, State</string>
+    <string name="and">and within...</string>
+    <string name="city_state">Enter a location...</string>
     <string name="cheap">Cheap</string>
-    <string name="affordable">Affordable</string>
+    <string name="ten">10 miles</string>
     <string name="search">Search</string>
     <string name="Unfound">I couldn\'t find that in my database :\'(
         Try adjusting your filters!</string>

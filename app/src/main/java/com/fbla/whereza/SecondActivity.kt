@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import kotlin.math.cosh
 
 
 class SecondActivity : AppCompatActivity() {
@@ -37,7 +38,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.second_page)
 
 
-        val cost_adjectives = listOf("Cheap", "Affordable", "Costly", "Expensive")
+        // val cost_adjectives = listOf("Cheap", "Affordable", "Costly", "Expensive")
 
         val scrollView = findViewById<ScrollView>(R.id.scrollView)
 
@@ -46,11 +47,11 @@ class SecondActivity : AppCompatActivity() {
 
         val attractions = findViewById<Spinner>(R.id.attractions)
         val starRating = findViewById<RatingBar>(R.id.ratingBar)
-        var location = findViewById<AutoCompleteTextView>(R.id.city_state)
-        val costScale = findViewById<SeekBar>(R.id.costScale)
+        var location = findViewById<AutoCompleteTextView>(R.id.location)
+        val distanceScale = findViewById<SeekBar>(R.id.distanceScale)
         val open = findViewById<Switch>(R.id.open)
 
-        val cost = findViewById<TextView>(R.id.cost)
+        val miles = findViewById<TextView>(R.id.miles)
         val search = findViewById<Button>(R.id.search)
 
 //        val API_Key = BuildConfig.PLACES_API_KEY
@@ -80,7 +81,7 @@ class SecondActivity : AppCompatActivity() {
             parseAddress(address)
             runOnUiThread {
 //            streetTextView.text = street
-                location.setText(city + ", " + state)
+//            location.setText(city + ", " + state)
 //            stateTextView.text = state
 //            countryTextView.text = country
 //            zipCodeTextView.text = zipCode
@@ -122,6 +123,7 @@ class SecondActivity : AppCompatActivity() {
             AdapterView.OnItemClickListener { parent, _, position, _ ->
                 val place = parent.getItemAtPosition(position) as Place
                 getPlaceDetails(place.id)
+                location.setText(place.description)
                 location.hideKeyboard()
                 location.clearFocus()
             }
@@ -154,9 +156,20 @@ class SecondActivity : AppCompatActivity() {
         attractions.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
 
 
-        costScale.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+        distanceScale.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, progress: Int, fromUser: Boolean) {
-                cost.text = cost_adjectives[progress]
+                if (distanceScale.progress in 0..50) {
+
+                    miles.text = (distanceScale.progress * .5).toString() + " miles"
+                }
+                else {
+                    if (distanceScale.progress < 0) {
+                        distanceScale.progress = 0
+                    }
+                    else if (distanceScale.progress > 50) {
+                        distanceScale.progress = 50
+                    }
+                }
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -170,16 +183,18 @@ class SecondActivity : AppCompatActivity() {
 
         search.setOnClickListener {
 
-            val city_state_selec = location.text.toString()
             val rating_selec = starRating.rating.toString()
             val topic_selec = attractions.selectedItem.toString()
-            val cost_selec = (costScale.progress + 1).toString()
+            val location_selec = location.text.toString()
+            val openRightNow_selec = open.isChecked.toString()
+            val miles_selec = miles.text.toString().replace((" miles").toRegex(), "")
 
             val intent = Intent(this, NewThirdActivity::class.java).also {
                 it.putExtra("rating", rating_selec)
                 it.putExtra("topic", topic_selec)
-                it.putExtra("city_state", city_state_selec)
-                it.putExtra("cost", cost_selec)
+                it.putExtra("location", location_selec)
+                it.putExtra("open", openRightNow_selec)
+                it.putExtra("miles", miles_selec)
             }
 
             startActivity(intent)
