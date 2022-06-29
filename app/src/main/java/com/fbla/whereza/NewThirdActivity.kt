@@ -64,6 +64,7 @@ class NewThirdActivity : AppCompatActivity() {
             {
                     matchResult -> //do stuff and make it find the information and assign it
             }
+            // ok
 
             val placesListJson =
                 URL("https://maps.googleapis.com/maps/api/place/textsearch/json??location=" + latitude + "%" + longitude + "&query=" + topic_selec + "&radius=" + (miles_selec.toDouble() * 1609) + "&opennow=" + openRightNow_selec + "&key=AIzaSyBo7DO3CnEOj4zjcdSOq2Q-bEc59EHwxLs").readText()
