@@ -17,7 +17,6 @@ class CardViewHolder(
     {
         cardBinding.placePhoto.setImageBitmap(place.placePhoto)
         cardBinding.placeName.text = place.placeName
-        cardBinding.placeDistance.text = place.placeDistance
         cardBinding.placeRating.rating = place.placeRating.toFloat()
         cardBinding.placeReviews.text = place.placeRating + " (" + place.placeReviews + ")"
         cardBinding.placeAddress.text = place.placeAddress

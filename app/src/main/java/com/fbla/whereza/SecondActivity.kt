@@ -151,7 +151,7 @@ class SecondActivity : AppCompatActivity() {
 
 
 
-        val options = arrayOf("Select an attraction!", "Restaurant", "Hotel", "Theater", "Landmark", "Museum")
+        val options = arrayOf("Select an attraction!", "Restaurant", "Hotel", "Parks", "Store")
 
         attractions.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
 
