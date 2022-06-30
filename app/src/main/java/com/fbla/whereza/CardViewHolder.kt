@@ -9,7 +9,8 @@ import java.net.URL
 
 
 class CardViewHolder(
-    private val cardBinding: CardBinding
+    private val cardBinding: CardBinding,
+    private val clickListener: PlaceClickListener
 ) : RecyclerView.ViewHolder(cardBinding.root)
 {
     @SuppressLint("SetTextI18n")
@@ -20,5 +21,9 @@ class CardViewHolder(
         cardBinding.placeRating.rating = place.placeRating.toFloat()
         cardBinding.placeReviews.text = place.placeRating + " (" + place.placeReviews + ")"
         cardBinding.placeAddress.text = place.placeAddress
+
+        cardBinding.Navigate.setOnClickListener{
+            clickListener.onClick(place)
+        }
     }
 }

@@ -1,7 +1,9 @@
 package com.fbla.whereza
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
 import android.service.autofill.FieldClassification
 import android.util.Log
@@ -14,7 +16,7 @@ import com.fbla.whereza.databinding.FourthPageBinding
 import kotlinx.coroutines.newSingleThreadContext
 import java.util.concurrent.atomic.AtomicInteger
 
-class FourthActivity : AppCompatActivity() {
+class FourthActivity : AppCompatActivity(), PlaceClickListener {
 
     private lateinit var binding: FourthPageBinding
 
@@ -44,6 +46,8 @@ class FourthActivity : AppCompatActivity() {
 
         var count = AtomicInteger(-1)
 
+        val mainActivity = this
+
         //Log.d("places", placeNamesList[1].groupValues.joinToString(", "))
         // forEach loop used to display all the matches
         photoReferenceList.forEach()
@@ -67,7 +71,7 @@ class FourthActivity : AppCompatActivity() {
 
             binding.RecyclerView.apply {
                 layoutManager = GridLayoutManager(applicationContext, 1)
-                adapter = CardAdapter(placeList)
+                adapter = CardAdapter(placeList, mainActivity)
             }
             Log.d("Hello", "ok2")
             }
@@ -76,9 +80,18 @@ class FourthActivity : AppCompatActivity() {
 
         binding.RecyclerView.apply {
             layoutManager = GridLayoutManager(applicationContext, 1)
-            adapter = CardAdapter(placeList)
+            adapter = CardAdapter(placeList, mainActivity)
         }
     }
+
+    override fun onClick(places: Places) {
+        Log.d("place", places.toString())
+        val url = "http://maps.google.co.in/maps?q=" + places.placeAddress
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
+
+
     private fun glideGet(imageUrl: String, callback: (Bitmap?) -> Unit) {
         Glide.with(this)
             .asBitmap()
